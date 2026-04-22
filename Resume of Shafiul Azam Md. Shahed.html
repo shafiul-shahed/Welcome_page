@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Shafiul Azam Md. Shahed - Senior IT Professional Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e2e8f0;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+            color: #0f172a;
+        }
+
+        /* Main resume card */
+        .resume-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* Header area with subtle gradient */
+        .resume-header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 2rem 2rem 1.8rem 2rem;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .header-info h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.3rem;
+            line-height: 1.2;
+        }
+
+        .header-info .title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+            border-left: 3px solid #3b82f6;
+            padding-left: 0.75rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            background: rgba(255,255,255,0.08);
+            padding: 0.7rem 1rem;
+            border-radius: 48px;
+            margin-top: 0.5rem;
+        }
+
+        .contact-details span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* professional summary */
+        .summary-section {
+            background: #f8fafc;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .summary-text {
+            font-size: 1rem;
+            color: #1e293b;
+            max-width: 90%;
+        }
+
+        /* two column layout for main content */
+        .resume-main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sidebar {
+            background: #fefefe;
+            width: 34%;
+            border-right: 1px solid #e9edf2;
+            padding: 1.8rem 1.5rem;
+        }
+
+        .main-content {
+            width: 66%;
+            padding: 1.8rem 2rem;
+        }
+
+        /* block styles */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #0f172a;
+            border-bottom: 3px solid #3b82f6;
+            display: inline-block;
+            padding-bottom: 0.25rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .skill-cat {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .skill-cat h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-badge {
+            background: #eef2ff;
+            color: #1e40af;
+            padding: 0.25rem 0.75rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .cert-item, .lang-item, .edu-item {
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .cert-name {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .job {
+            margin-bottom: 1.8rem;
+        }
+
+        .job-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.3rem;
+        }
+
+        .job-title {
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0f172a;
+        }
+
+        .company {
+            font-weight: 600;
+            color: #2c3e66;
+        }
+
+        .date-location {
+            font-size: 0.75rem;
+            color: #5b6e8c;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .job-desc {
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .job-desc li {
+            margin-bottom: 0.45rem;
+            font-size: 0.85rem;
+            color: #2d3a4b;
+        }
+
+        .achievement-highlight {
+            background: #f1f5f9;
+            border-left: 3px solid #3b82f6;
+            padding: 0.2rem 0.5rem;
+            margin: 0.5rem 0;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .reference-block {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .ref-name {
+            font-weight: 700;
+        }
+
+        @media (max-width: 780px) {
+            .sidebar, .main-content {
+                width: 100%;
+                border-right: none;
+            }
+            .sidebar {
+                border-bottom: 1px solid #e2e8f0;
+            }
+            .summary-text {
+                max-width: 100%;
+            }
+            .resume-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        .inline-icon {
+            font-weight: 400;
+            margin-right: 4px;
+        }
+        .badge-percent {
+            background: #dcfce7;
+            color: #166534;
+        }
+        .note-image-placeholder {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #475569;
+            margin-top: 0.5rem;
+        }
+        footer {
+            background: #f9fafb;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            font-size: 0.7rem;
+            padding: 1rem;
+            color: #5b6e8c;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li::before {
+            content: "▹";
+            color: #3b82f6;
+            font-weight: bold;
+            display: inline-block;
+            width: 1rem;
+            margin-left: -1rem;
+        }
+        .no-bullet::before {
+            content: "";
+        }
+    </style>
+</head>
+<body>
+<div class="resume-container">
+    <!-- Header section with name & contact -->
+    <div class="resume-header">
+        <div class="header-info">
+            <h1>Shafiul Azam Md. Shahed</h1>
+            <div class="title">Senior IT Professional</div>
+            <div class="contact-details">
+                <span>📞 +88 0161 000 5932</span>
+                <span>✉️ md.shahed@gmail.com</span>
+                <span>📍 Dhaka, Bangladesh</span>
+            </div>
+        </div>
+        <!-- small placeholder for original image reference (original PDF had an image placeholder) -->
+        <div style="background: #334155; border-radius: 60px; padding: 0.4rem 1rem; font-size:0.75rem;">
+            ⚡ 15+ Years Expertise
+        </div>
+    </div>
+
+    <!-- Summary Row -->
+    <div class="summary-section">
+        <div class="summary-text">
+            <strong>📌 Mathematician-turned-IT Professional</strong> with 15+ years of expertise in Systems Administration, Network Engineering, and IT Infrastructure Management. 
+            Skilled in Windows/Linux Servers, Cisco & MikroTik Networking, VoIP, and Security Solutions. Driving performance improvements, cutting operational costs, 
+            and delivering <strong>99%+ uptime</strong> across enterprise-scale operations.
+        </div>
+    </div>
+
+    <!-- Two column layout -->
+    <div class="resume-main">
+        <!-- LEFT SIDEBAR: Special Competency, Certs, Education, Languages, References -->
+        <div class="sidebar">
+            <!-- Special Competency Section (combined skills) -->
+            <div class="section">
+                <div class="section-title">⚙️ Core Competencies</div>
+                <div class="skill-cat">
+                    <h4>🖥️ Systems Administration</h4>
+                    <div class="skill-items">
+                        <span class="skill-badge">Windows Server (AD/DNS/DHCP/IIS)</span>
+                        <span class="skill-badge">Linux RHEL 8/CentOS (DNS, Apache, SQUID, FTP, DHCP, Samba, IPTables)</span>
+                        <span class="skill-badge">VMware ESXi / KVM / VirtualBox</span>
+                    </div>
+                </div>
+                <div class="skill-cat">
+                    <h4>🌐 Networking & Security</h4>
+                    <div class="skill-items">
+                        <span class="skill-badge">Cisco (VLAN, STP, Routing, NAT, ACL)</span>
+                        <span class="skill-badge">MikroTik (Firewall, QoS, VPN, Bandwidth)</span>
+                        <span class="skill-badge">VoIP / Polycom / SIP / H.323</span>
+                        <span class="skill-badge">Surveillance (Dahua NVR, IP Cams)</span>
+                    </div>
+                </div>
+                <div class="skill-cat">
+                    <h4>🗄️ Databases & Monitoring</h4>
+                    <div class="skill-items">
+                        <span class="skill-badge">Oracle, MySQL, DB2</span>
+                        <span class="skill-badge">Zabbix, MRTG, Wireshark</span>
+                    </div>
+                </div>
+                <div class="skill-cat">
+                    <h4>🛠️ OS & Tools</h4>
+                    <div class="skill-items">
+                        <span class="skill-badge">Windows 10/11/Server</span>
+                        <span class="skill-badge">RHEL, CentOS, Ubuntu</span>
+                        <span class="skill-badge">MS Office, Adobe PS, SharePoint</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Certificates -->
+            <div class="section">
+                <div class="section-title">📜 Certifications</div>
+                <div class="cert-item"><span class="cert-name">✔ MTcNA</span> – MikroTik Certified Network Associate</div>
+                <div class="cert-item"><span class="cert-name">✔ MTcRE</span> – MikroTik Certified Routing Engineer</div>
+                <div class="cert-item"><span class="cert-name">✔ MTcSE</span> – MikroTik Certified Security Engineer</div>
+                <div class="cert-item"><span class="cert-name">✔ RHCSA</span> – Red Hat Certified System Administrator</div>
+                <div class="cert-item"><span class="cert-name">✔ CCNA</span> – Cisco Certified Network Associate</div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <div class="section-title">🎓 Education</div>
+                <div class="edu-item"><strong>Bachelor of Science (Hons.)</strong><br>National University (1999-2002) <br>Mathematics</div>
+            </div>
+
+            <!-- Language Proficiency -->
+            <div class="section">
+                <div class="section-title">🗣️ Languages</div>
+                <div class="lang-item"><strong>Bengali:</strong> Mother Tongue</div>
+                <div class="lang-item"><strong>English:</strong> Fluent (Professional Working Proficiency)</div>
+            </div>
+
+            <!-- References -->
+            <div class="section">
+                <div class="section-title">📇 References</div>
+                <div class="reference-block">
+                    <div class="ref-name">Mohammad Ashiqur Rahman</div>
+                    <div>Managing Director, Segma Software & Solutions LTD</div>
+                    <div>📞 +88 01671 051050</div>
+                    <div>✉️ ashique@segmatek.com.bd</div>
+                </div>
+                <div class="reference-block" style="margin-top: 0.8rem;">
+                    <div class="ref-name">Husna Zaman Al Hadi</div>
+                    <div>Deputy General Manager (IT), Edison Group BD</div>
+                    <div>📞 +88 01787 651510</div>
+                    <div>✉️ husna.hadi@edison-bd.com</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT MAIN CONTENT: Professional Experience -->
+        <div class="main-content">
+            <div class="section">
+                <div class="section-title">💼 Work Experience</div>
+
+                <!-- Senior IT Officer -->
+                <div class="job">
+                    <div class="job-header">
+                        <div><span class="job-title">Senior IT Officer</span> <span class="company">@ Pioneer Knitwears (BD) Ltd. (Badsha Group)</span></div>
+                        <div class="date-location">Nov 2017 – Present | Dhaka, Bangladesh</div>
+                    </div>
+                    <ul class="job-desc">
+                        <li>End-to-end technical support for 1,000+ devices (desktops, laptops, IP phones, printers, Wi-Fi) ensuring 99%+ system uptime.</li>
+                        <li>Configured corporate email security (spam filters, encryption) and mitigated security risks via threat monitoring.</li>
+                        <li>Deployed & maintained 300+ Yealink IP phones, SIP trunk, QoS, multi-site call routing → reduced telecom costs by 35%.</li>
+                        <li>Managed Dahua CCTV surveillance, 24/7 security coverage, biometric attendance (ZKTeco Face Punch) for 8,000+ employees → reduced manual errors by 30%.</li>
+                        <li>Designed LAN/WAN networks using MikroTik routers & Cisco switches, improved network performance by 40% via bandwidth optimization.</li>
+                        <li>Led cross-departmental IT troubleshooting, staff training on best practices.</li>
+                    </ul>
+                    <div class="achievement-highlight">🏆 99%+ Uptime | 35% Telecom Cost Reduction | 40% Performance Boost</div>
+                </div>
+
+                <!-- Senior System Support Engineer -->
+                <div class="job">
+                    <div class="job-header">
+                        <div><span class="job-title">Senior System Support Engineer</span> <span class="company">@ Thakral Information Systems Pvt. Ltd. (Airtel BI Project)</span></div>
+                        <div class="date-location">Jan 2011 – Oct 2017 | Dhaka, Bangladesh</div>
+                    </div>
+                    <ul class="job-desc">
+                        <li>Operated IBM Infosphere & DataStage ETL pipelines for Airtel BI; performed error handling & tuning on DB2.</li>
+                        <li>Optimized SQL queries using Advanced Query Tool (AQT), improving runtime by 35%.</li>
+                        <li>Generated daily/weekly/monthly reports (Oracle PL/SQL); automated 15+ ad-hoc reports saving 20+ hours/month.</li>
+                        <li>Flagged data anomalies via exception analysis, saved $50K+ in revenue leakage.</li>
+                        <li>Monitored Infosphere streams for 99.9% uptime; redesigned 5 legacy ETL jobs reducing processing time by 50%.</li>
+                    </ul>
+                </div>
+
+                <!-- System Support Engineer - Airtel Bangladesh -->
+                <div class="job">
+                    <div class="job-header">
+                        <div><span class="job-title">System Support Engineer</span> <span class="company">@ Airtel Bangladesh Limited</span></div>
+                        <div class="date-location">May 2009 – Dec 2010 | Dhaka, Bangladesh</div>
+                    </div>
+                    <ul class="job-desc">
+                        <li>Provided IT infrastructure support for 200+ devices across Bogura zonal offices, resolved 95% of hardware issues within SLA.</li>
+                        <li>Monitored Canopy wireless connectivity for 15+ Authorized Retail Centers (ARCs), reduced network downtime by 30%.</li>
+                        <li>Handled SLA/KPI-based services achieving 98% compliance; used ITIL ticketing system.</li>
+                    </ul>
+                </div>
+
+                <!-- IT Helpdesk Engineer -->
+                <div class="job">
+                    <div class="job-header">
+                        <div><span class="job-title">IT Helpdesk Engineer</span> <span class="company">@ Tech valley Networks Limited</span></div>
+                        <div class="date-location">Feb 2007 – Apr 2009 | Dhaka, Bangladesh</div>
+                    </div>
+                    <ul class="job-desc">
+                        <li>Supported 100+ devices for Warid offices in Bogura, resolved 90% of IT issues onsite for 15+ franchises (North Zone).</li>
+                        <li>Monitored Canopy wireless links; reduced connectivity outages by 25% through proactive troubleshooting.</li>
+                    </ul>
+                </div>
+
+                <!-- Assistant Network Administrator -->
+                <div class="job">
+                    <div class="job-header">
+                        <div><span class="job-title">Assistant Network Administrator</span> <span class="company">@ NahianTechnology (Pvt.) Ltd. (ISP)</span></div>
+                        <div class="date-location">July 2004 – Jan 2007 | Dhaka, Bangladesh</div>
+                    </div>
+                    <ul class="job-desc">
+                        <li>Network configuration, monitoring, and troubleshooting for ISP infrastructure.</li>
+                        <li>Handled routing, customer premise equipment, and link stability.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional note: achievements summary -->
+            <div class="section">
+                <div class="section-title">📈 Key Achievements</div>
+                <div class="skill-items" style="gap: 0.6rem; margin-top: 0.5rem;">
+                    <span class="skill-badge badge-percent">99.9% BI Process Uptime</span>
+                    <span class="skill-badge badge-percent">50% ETL Time Reduction</span>
+                    <span class="skill-badge badge-percent">35% SQL Query Optimization</span>
+                    <span class="skill-badge badge-percent">30% Less Manual Payroll Errors</span>
+                    <span class="skill-badge badge-percent">$50K Revenue Leakage Saved</span>
+                </div>
+            </div>
+            <!-- original PDF note: the image placeholder in PDF was omitted, but we keep clean -->
+            <div class="note-image-placeholder">
+                ⚡ MikroTik Certified Engineer | Cisco | Red Hat | 15+ years turning infrastructure into reliability
+            </div>
+        </div>
+    </div>
+    <footer>
+        🇧🇩 Shafiul Azam Md. Shahed – Senior IT Professional | References available upon request | 99%+ uptime track record
+    </footer>
+</div>
+</body>
+</html>
